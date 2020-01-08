@@ -1,4 +1,14 @@
 <%if @name%>
-<h1>My name is <%= @name %></h1>
+<h1>My name is <%= @name %>.</h1>
 <%end%>
+
+<div>
 <img style="border: 3px dashed red" src="http://bit.ly/1eze8aE">
+</div>
+
+<%if @name == nil%>
+<form action="/named-cat">
+<input type="text" name="name">
+<input type="submit" value="Submit">
+</form>
+<%end%>
